@@ -1,7 +1,6 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import ModalForm from "./ModalForm";
 import { GoogleButton } from "react-google-button";
@@ -20,7 +19,6 @@ const style = {
   boxShadow: 24,
   borderRadius: "10px",
   overflow: "hidden",
-
   boxShadow: "0px 0px 10px rgba(0,0,0,0.4)",
 };
 
@@ -78,9 +76,9 @@ export default function AuthModal() {
       >
         <Box sx={style}>
           <ModalForm handleClose={handleClose} />
-          <span>OR</span>
+          <span style={{width: "100%",display: "flex", justifyContent: 'center', marginBottom: '10px'}}>OR</span>
           <GoogleButton
-            style={{ width: "100%", outline: "none" }}
+            style={{ width: "100%", outline: "none", }}
             onClick={signInWithGoogle}
           />
         </Box>

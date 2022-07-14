@@ -14,7 +14,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { userSliceActions } from "./store/user-slice";
 import { doc, onSnapshot } from "firebase/firestore";
 import { watchlistActions } from "./store/watchlist-slice";
-import { uiActions } from "./store/ui-slice";
 
 function App() {
 
@@ -29,11 +28,8 @@ function App() {
       const coinRef = doc(db, "watchlist", user.uid);
       var unsubscribe = onSnapshot(coinRef, coin => {
         if (coin.exists()) {
-          console.log(coin.data().coins)
           dispatch(watchlistActions.getWatchlist(coin.data().coins))
-        } else {
-          console.log("No coins in Watchlist")
-        }
+        } 
       })
       return () => {
         unsubscribe();

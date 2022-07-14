@@ -92,10 +92,11 @@ const CoinPage = () => {
 
   useEffect(() => {
     dispatch(fetchCoin(id));
-  }, [dispatch,id]);
+  }, [dispatch, id]);
+  
 
   if (!coin) return <LinearProgress style={{ backgroundColor: "gold" }} />;
-
+console.log("coin page rendered")
   return (
     <Responsive
       sx={{

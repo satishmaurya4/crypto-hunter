@@ -29,7 +29,7 @@ const CoinInfo = ({ coin }) => {
   useEffect(() => {
     dispatch(fetchChartData(coin.id, days, currency));
   }, [currency, days, coin.id, dispatch]);
-
+  console.log("coinInfo rendered");
   return (
     <ThemeProvider theme={darkTheme}>
       <Responsive
@@ -95,4 +95,4 @@ const CoinInfo = ({ coin }) => {
   );
 };
 
-export default CoinInfo;
+export default React.memo(CoinInfo);

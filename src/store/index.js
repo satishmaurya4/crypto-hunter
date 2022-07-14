@@ -14,5 +14,9 @@ export const store = configureStore({
         user: userSlice.reducer,
         ui: uiSlice.reducer,
         watchlist: watchlistSlice.reducer,
-    }
+    },
+    middleware: getDefaultMiddleware =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }),
 })

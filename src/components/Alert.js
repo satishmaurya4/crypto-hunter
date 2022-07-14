@@ -7,7 +7,6 @@ function AppAlert() {
   const [show, setShow] = useState(true);
   const alert = useSelector((state) => state.ui.alert);
   const dispatch = useDispatch();
-console.log(alert)
   const container = {
     backgroundColor: alert.type === "success" ? "green" : "red",
     color: alert.type === "success" ? "lightgreen" : "pink",

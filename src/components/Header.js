@@ -16,7 +16,6 @@ const Header = () => {
   const currency = useSelector((state) => state.currency.currency);
   const user = useSelector((state) => state.user.user);
   const dispatch = useDispatch();
-  console.log("user", user);
   const currencyChangeHandler = (e) => {
     dispatch(currencyActions.changeCurrency(e.target.value));
   };
