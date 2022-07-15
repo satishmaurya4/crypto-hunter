@@ -36,7 +36,7 @@ const Signup = ({ handleClose }) => {
     } catch (error) {
       dispatch(uiActions.alert({
         type: "error",
-        message: "Signning up faild!.",
+        message: "Signing up failed!.",
         open: true,
       }));
     }

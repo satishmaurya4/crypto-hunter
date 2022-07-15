@@ -49,7 +49,7 @@ export default function ModalForm({handleClose}) {
 
   return (
     <Box sx={{ width: "100%", backgroundColor: "gray" }}>
-      <Box sx={{}}>
+      <Box>
         <Tabs
           value={value}
           onChange={handleChange}
